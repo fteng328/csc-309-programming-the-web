@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <title>CSC 309 A1</title>
+  
+  <head> 
+    <link href="default.css" rel="stylesheet"  />
+
+
+    <script type="text/javascript" src="assignment1.js"> 
+ 
+    </script>
+    
+  </head>
+ 
+  
+  
+    
+  <body	    onmouseup="finishDrawing(event)"
+	    onmousedown="setUpStart(event)" 
+	    onmousemove="updateMouseCoordinates(event)"> 
+    <div style="height: 400px;  width: 600px;">
+    <canvas id="drawingCanvas" width="600" height="400" ></canvas>
+    
+    <!--p>left click to pick up the ball. left click again to drop the ball</p-->
+    <!--img src="ball.jpg" id="pic01" style="position: absolute;" onclick="mov=!mov;" /-->
+      <script>
+	  var canvas = document.getElementById("drawingCanvas");
+	  var context = canvas.getContext("2d");
+      </script>
+    </div>
+    
+    
+    
+    <div>
+    <span id="c01">Mouse Position</span>
+    </div>
+    
+    <div>
+    <span id="c02">Now Selecting : Nothing</span>
+    </div>    
+    
+    
+    <div class = "title">
+    <h3>Select Shape</h3>
+    <button onClick="selectTriangle()">Add Triangle</button>
+    <button onClick="selectSquare()">Add Square</button>
+    <button onClick="selectLine()">Add Line</button>
+    <button onClick="justSelect()">Select</button>
+    </div>
+    
+    <div class = "title">
+    <h3>Select Graphic Properties</h3>
+    <form id = "form1">
+    select your filling color:
+    <select id ="fillcolor">
+    	<option>green</option>
+    	<option>pink</option>
+    	<option>blue</option>
+    	<option selected = "selected">red</option> 
+    	<option>orange</option>
+    	<option>purple</option>
+    </select>
+    </form>	
+
+     <form id = "form2">
+    select your outline color:
+    <select id ="outlinecolor">
+    	<option>green</option>
+    	<option>pink</option>
+    	<option>blue</option>
+    	<option selected = "selected">black</option> 
+    	<option>orange</option>
+    	<option>purple</option>
+    </select>
+    </form>	
+
+     <form id = "form3">
+    select your outline width:
+    <select id ="outlinewidth">
+    	<option>1</option>
+    	<option>3</option>
+    	<option>5</option>
+    	<option selected = "selected">7</option> 
+    	<option>9</option>
+    	<option>15</option>
+    </select>
+    </form>
+    
+    </div>
+    
+    <div class = "title">
+    <h3>Select Editing Choice</h3>
+    <button onClick="deleteAll()">Clear Canvas</button>
+    <button onClick="copyPaste()">CopyAndPaste</button>
+    <button onClick="eraseShape()">Erase</button>
+    <button onClick="activateResize()">Resize</button>
+    <button onClick="activateDrag()">Drag</button>
+    </div>
+	
+    <div class = "title">
+    <h3>Change selected shape's properties</h3>
+    <form id = "form4">
+    change your filling color:
+    <select id ="cfillcolor" >
+    	<option>green</option>
+    	<option>pink</option>
+    	<option>blue</option>
+    	<option selected = "selected">red</option> 
+    	<option>orange</option>
+    	<option>purple</option>
+    </select>
+    </form>	
+
+     <form id = "form5">
+    change your outline color:
+    <select id ="coutlinecolor">
+    	<option>green</option>
+    	<option>pink</option>
+    	<option>blue</option>
+    	<option selected = "selected">black</option> 
+    	<option>orange</option>
+    	<option>purple</option>
+    </select>
+    </form>	
+
+     <form id = "form6">
+    change your outline width:
+    <select id ="coutlinewidth">
+    	<option>1</option>
+    	<option>3</option>
+    	<option>5</option>
+    	<option selected = "selected">7</option> 
+    	<option>9</option>
+    	<option>15</option>
+    </select>
+    </form>
+    
+    <button onClick="submitChange()">Submit Change</button>
+    
+    </div>
+	
+    
+
+    
+
+    
+    
+    
+    
+  </body>
+</html>  
